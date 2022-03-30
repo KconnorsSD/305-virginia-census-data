@@ -69,13 +69,13 @@ def display_results(selected_value):
     fig = go.Figure(go.Choroplethmapbox(geojson=counties,
                                     locations=df['FIPS'],
                                     z=df[selected_value],
-                                    colorscale='Blues',
+                                    colorscale='tealgrn',
                                     text=df['County'],
                                     zmin=valmin,
                                     zmax=valmax,
                                     marker_line_width=0))
     fig.update_layout(mapbox_style="carto-positron",
-                      mapbox_zoom=5.8,
+                      mapbox_zoom=6.0,
                       mapbox_center = {"lat": 38.0293, "lon": -79.4428})
     fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
